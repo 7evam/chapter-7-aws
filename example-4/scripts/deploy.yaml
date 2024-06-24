@@ -7,20 +7,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: video-streaming
+  name: flixtube
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: video-streaming
+      app: flixtube
   template:
     metadata:
       labels:
-        app: video-streaming
+        app: flixtube
     spec:
       containers: 
-      - name: video-streaming
-        image: bmdk1.azurecr.io/video-streaming:1
+      - name: flixtube
+        image: YOUR_ACCOUNT_ID.dkr.ecr.us-east-2.amazonaws.com/flixtube:1
         imagePullPolicy: IfNotPresent
         env:
         - name: PORT
@@ -29,10 +29,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: video-streaming
+  name: flixtube
 spec:
   selector:
-    app: video-streaming
+    app: flixtube
   type: LoadBalancer
   ports:
     - protocol: TCP

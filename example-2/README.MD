@@ -1,11 +1,10 @@
 # Example-2
 
-This example uses Terraform to create a private container registery in Azure.
+This example uses Terraform to create a private container registery in AWS.
 
-Run this example using:
+Run this example by filling in your info in providers.tf then using:
 
 ```bash
-cd example-2/scripts
 terraform init
 terraform apply
 ```

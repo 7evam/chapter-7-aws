@@ -1,11 +1,10 @@
 # Example-1
 
-This example uses Terraform to create a resource group in Azure.
+This example uses Terraform to create a resource group in AWS.
 
-Run this example using:
+Run this example by filling in your info in providers.tf then using:
 
 ```bash
-cd example-1/scripts
 terraform init
 terraform apply
 ```

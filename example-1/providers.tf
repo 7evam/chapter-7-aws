@@ -2,15 +2,15 @@
 
 terraform {
   required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "~> 3.71.0"
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
     }
   }
-
-  required_version = ">= 1.5.6"
 }
 
-provider "azurerm" {
-  features {}
+provider "aws" {
+  region                   = "us-east-2"
+  shared_credentials_files = ["/Users/YOUR USER NAME/.aws/credentials"]
+  profile                  = "YOUR PROFILE (if necessary)"
 }
